@@ -1,4 +1,4 @@
-# Ошибки доступа · 2026-11-25 17:16 UTC
+# Ошибки доступа · 2026-11-25 21:13 UTC
 
 - **Bank of Mauritius** — robots.txt не читается — ручной мониторинг → проверить вручную: https://www.bom.mu/
 - **IEA** — HTTPError: 403 Client Error: Forbidden for url: https://www.iea.org/news → проверить вручную: https://www.iea.org/news
