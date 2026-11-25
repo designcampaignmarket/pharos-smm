@@ -1,32 +1,280 @@
 {
-  "keywords": [
-    "rate", "interest", "inflation", "monetary policy", "FOMC", "key rate",
-    "commodity", "oil", "gas", "metals", "gold", "pink sheet",
-    "bond", "repo", "settlement", "T+1", "collateral", "securities",
-    "MiCA", "crypto", "virtual asset", "VASP", "stablecoin", "token", "DLT", "digital",
-    "private equity", "private credit", "venture", "fundraising",
-    "wealth", "art market", "investment dealer", "AML", "CFT", "Mauritius",
-    "financial stability", "capital markets", "regulation", "guidance", "consultation"
-  ],
-  "sources": [
-    {"id": "fed", "name": "Federal Reserve", "type": "rss", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "rubric": "Markets & Macro", "asset_class": "FX & Commodities, Bonds", "priority": "A", "min_hours": 2, "filter": false},
-    {"id": "ecb", "name": "ECB", "type": "rss", "url": "https://www.ecb.europa.eu/rss/press.html", "rubric": "Markets & Macro", "asset_class": "FX & Commodities, Bonds, Digital Assets", "priority": "A", "min_hours": 2, "filter": false},
-
-    {"id": "fsc", "name": "FSC Mauritius", "type": "html", "url": "https://www.fscmauritius.org/", "link_contains": ["/media/", "communique", "public-notice", "circular"], "rubric": "Regulation", "asset_class": "", "priority": "A", "min_hours": 12, "filter": false},
-    {"id": "bom", "name": "Bank of Mauritius", "type": "html", "url": "https://www.bom.mu/", "link_contains": ["media_release", "mpc", "monetary-policy", "press-release"], "rubric": "Markets & Macro", "asset_class": "FX & Commodities", "priority": "A", "min_hours": 12, "filter": false},
-    {"id": "wb", "name": "World Bank Pink Sheet", "type": "html", "url": "https://www.worldbank.org/en/research/commodity-markets", "link_contains": ["Pink-Sheet", "pink-sheet", "CMO-"], "rubric": "Markets & Macro", "asset_class": "FX & Commodities", "priority": "A", "min_hours": 24, "filter": false},
-    {"id": "iea", "name": "IEA", "type": "html", "url": "https://www.iea.org/news", "link_contains": ["/news/", "/reports/oil-market-report"], "rubric": "Markets & Macro", "asset_class": "FX & Commodities", "priority": "A", "min_hours": 12, "filter": true},
-    {"id": "esma", "name": "ESMA News", "type": "html", "url": "https://www.esma.europa.eu/press-news/esma-news", "link_contains": ["/press-news/esma-news/"], "rubric": "Regulation", "asset_class": "Equities & Indices, Bonds", "priority": "A", "min_hours": 12, "filter": false},
-    {"id": "icma", "name": "ICMA", "type": "html", "url": "https://www.icmagroup.org/News/", "link_contains": ["/News/news-in-brief/"], "rubric": "Regulation", "asset_class": "Bonds", "priority": "A", "min_hours": 12, "filter": false},
-
-    {"id": "mica", "name": "ESMA MiCA", "type": "html", "url": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica", "link_contains": ["/sites/default/files/", "/document/"], "rubric": "Digital Assets", "asset_class": "Digital Assets", "priority": "B", "min_hours": 72, "filter": false},
-    {"id": "bis", "name": "BIS", "type": "html", "url": "https://www.bis.org/", "link_contains": ["/media-releases/", "/publications/"], "rubric": "Digital Assets", "asset_class": "Digital Assets, Bonds", "priority": "B", "min_hours": 48, "filter": true},
-    {"id": "investeurope", "name": "Invest Europe", "type": "html", "url": "https://www.investeurope.eu/news/newsroom/", "link_contains": ["/news/newsroom/"], "rubric": "Private Markets", "asset_class": "Private Equity, Private Credit", "priority": "B", "min_hours": 72, "filter": false},
-    {"id": "knightfrank", "name": "Knight Frank Wealth Report", "type": "html", "url": "https://www.knightfrank.com/research/reports/wealthreport", "link_contains": ["wealth"], "rubric": "Alternatives", "asset_class": "Alternative Assets", "priority": "B", "min_hours": 168, "filter": false},
-    {"id": "artbasel", "name": "Art Basel & UBS Art Market Report", "type": "html", "url": "https://theartmarket.artbasel.com/previous-reports", "link_contains": ["report"], "rubric": "Alternatives", "asset_class": "Alternative Assets", "priority": "B", "min_hours": 168, "filter": false}
-  ],
-  "google_alerts": [
-    {"id": "ga_fsc", "name": "Google Alert: FSC Mauritius", "type": "rss", "url": "", "rubric": "Regulation", "asset_class": "", "priority": "A", "min_hours": 4, "filter": false},
-    {"id": "ga_esma", "name": "Google Alert: ESMA", "type": "rss", "url": "", "rubric": "Regulation", "asset_class": "", "priority": "A", "min_hours": 4, "filter": false}
-  ]
+ "keywords": [
+  "rate",
+  "interest",
+  "inflation",
+  "monetary policy",
+  "FOMC",
+  "key rate",
+  "commodity",
+  "oil",
+  "gas",
+  "metals",
+  "gold",
+  "pink sheet",
+  "bond",
+  "repo",
+  "settlement",
+  "T+1",
+  "collateral",
+  "securities",
+  "MiCA",
+  "crypto",
+  "virtual asset",
+  "VASP",
+  "stablecoin",
+  "token",
+  "DLT",
+  "digital",
+  "private equity",
+  "private credit",
+  "venture",
+  "fundraising",
+  "wealth",
+  "art market",
+  "investment dealer",
+  "AML",
+  "CFT",
+  "Mauritius",
+  "financial stability",
+  "capital markets",
+  "regulation",
+  "guidance",
+  "consultation"
+ ],
+ "sources": [
+  {
+   "id": "fed",
+   "name": "Federal Reserve",
+   "type": "rss",
+   "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+   "rubric": "Markets & Macro",
+   "asset_class": "FX & Commodities, Bonds",
+   "priority": "A",
+   "min_hours": 2,
+   "filter": false
+  },
+  {
+   "id": "ecb",
+   "name": "ECB",
+   "type": "rss",
+   "url": "https://www.ecb.europa.eu/rss/press.html",
+   "rubric": "Markets & Macro",
+   "asset_class": "FX & Commodities, Bonds, Digital Assets",
+   "priority": "A",
+   "min_hours": 2,
+   "filter": false
+  },
+  {
+   "id": "fsc",
+   "name": "FSC Mauritius",
+   "type": "html",
+   "url": "https://www.fscmauritius.org/media-corner/communiques-press-releases",
+   "link_contains": [
+    "/media/",
+    "communique",
+    "public-notice",
+    "circular"
+   ],
+   "rubric": "Regulation",
+   "asset_class": "",
+   "priority": "A",
+   "min_hours": 12,
+   "filter": false
+  },
+  {
+   "id": "bom",
+   "name": "Bank of Mauritius",
+   "type": "html",
+   "url": "https://www.bom.mu/",
+   "link_contains": [
+    "media_release",
+    "mpc",
+    "monetary-policy",
+    "press-release"
+   ],
+   "rubric": "Markets & Macro",
+   "asset_class": "FX & Commodities",
+   "priority": "A",
+   "min_hours": 12,
+   "filter": false
+  },
+  {
+   "id": "wb",
+   "name": "World Bank Pink Sheet",
+   "type": "html",
+   "url": "https://www.worldbank.org/en/research/commodity-markets",
+   "link_contains": [
+    "Pink-Sheet"
+   ],
+   "rubric": "Markets & Macro",
+   "asset_class": "FX & Commodities",
+   "priority": "A",
+   "min_hours": 24,
+   "filter": false,
+   "link_domain": "thedocs.worldbank.org",
+   "date_order": "mdy"
+  },
+  {
+   "id": "iea",
+   "name": "IEA",
+   "type": "html",
+   "url": "https://www.iea.org/news",
+   "link_contains": [
+    "/news/",
+    "/reports/oil-market-report"
+   ],
+   "rubric": "Markets & Macro",
+   "asset_class": "FX & Commodities",
+   "priority": "A",
+   "min_hours": 12,
+   "filter": true
+  },
+  {
+   "id": "esma",
+   "name": "ESMA News",
+   "type": "html",
+   "url": "https://www.esma.europa.eu/press-news/esma-news",
+   "link_contains": [
+    "/press-news/esma-news/"
+   ],
+   "rubric": "Regulation",
+   "asset_class": "Equities & Indices, Bonds",
+   "priority": "A",
+   "min_hours": 12,
+   "filter": false
+  },
+  {
+   "id": "icma",
+   "name": "ICMA",
+   "type": "html",
+   "url": "https://www.icmagroup.org/News/",
+   "link_contains": [
+    "/News/news-in-brief/"
+   ],
+   "rubric": "Regulation",
+   "asset_class": "Bonds",
+   "priority": "A",
+   "min_hours": 12,
+   "filter": false
+  },
+  {
+   "id": "mica",
+   "name": "ESMA MiCA",
+   "type": "html",
+   "url": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica",
+   "link_contains": [
+    "/sites/default/files/20",
+    "/document/"
+   ],
+   "rubric": "Digital Assets",
+   "asset_class": "Digital Assets",
+   "priority": "B",
+   "min_hours": 72,
+   "filter": false
+  },
+  {
+   "id": "bis",
+   "name": "BIS",
+   "type": "html",
+   "url": "https://www.bis.org/",
+   "link_contains": [
+    "/media-releases/",
+    "/publications/"
+   ],
+   "rubric": "Digital Assets",
+   "asset_class": "Digital Assets, Bonds",
+   "priority": "B",
+   "min_hours": 48,
+   "filter": true
+  },
+  {
+   "id": "investeurope",
+   "name": "Invest Europe",
+   "type": "html",
+   "url": "https://www.investeurope.eu/news/newsroom/",
+   "link_contains": [
+    "/news/newsroom/",
+    "/publications-policy/publications/"
+   ],
+   "rubric": "Private Markets",
+   "asset_class": "Private Equity, Private Credit",
+   "priority": "B",
+   "min_hours": 72,
+   "filter": false
+  },
+  {
+   "id": "knightfrank",
+   "name": "Knight Frank Wealth Report",
+   "type": "html",
+   "url": "https://www.knightfrank.com/research/reports/wealthreport",
+   "link_contains": [
+    "wealth"
+   ],
+   "rubric": "Alternatives",
+   "asset_class": "Alternative Assets",
+   "priority": "B",
+   "min_hours": 168,
+   "filter": false
+  },
+  {
+   "id": "artbasel",
+   "name": "Art Basel & UBS Art Market Report",
+   "type": "html",
+   "url": "https://theartmarket.artbasel.com/previous-reports",
+   "link_contains": [
+    "the-art-market-",
+    "survey-of-global-collecting",
+    "/download/"
+   ],
+   "rubric": "Alternatives",
+   "asset_class": "Alternative Assets",
+   "priority": "B",
+   "min_hours": 168,
+   "filter": false
+  }
+ ],
+ "google_alerts": [
+  {
+   "id": "ga_fsc",
+   "name": "Google Alert: FSC Mauritius",
+   "type": "rss",
+   "url": "",
+   "rubric": "Regulation",
+   "asset_class": "",
+   "priority": "A",
+   "min_hours": 4,
+   "filter": false
+  },
+  {
+   "id": "ga_esma",
+   "name": "Google Alert: ESMA",
+   "type": "rss",
+   "url": "",
+   "rubric": "Regulation",
+   "asset_class": "",
+   "priority": "A",
+   "min_hours": 4,
+   "filter": false
+  }
+ ],
+ "exclude": [
+  "enforcement action",
+  "approval of application",
+  "approval of two applications",
+  "College Fed",
+  "Scholarship",
+  "New ICMA members",
+  "Awards",
+  "delegation",
+  "newsletter",
+  "Women's Network",
+  "Women’s Network",
+  "job",
+  "vacanc",
+  "Invitation for Bids",
+  "procurement",
+  "boom barrier",
+  "Lease"
+ ]
 }
