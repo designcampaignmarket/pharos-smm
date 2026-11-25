@@ -31,6 +31,9 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "output"
+STATE_VERSION = 2
+MAX_AGE_DAYS = 45          # older items are ignored
+BASELINE_DAYS = 30         # first fetch of a source: keep only dated items from the last 30 days
 UA = "PharosGlobalSMMMonitor/1.0 (+editorial monitoring; headlines and links only)"
 TIMEOUT = 25
 NOW = datetime.now(timezone.utc)
@@ -66,13 +69,17 @@ def norm_title(t: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
 
 
-def parse_date(text: str) -> str | None:
+def parse_date(text: str, order: str = "dmy") -> str | None:
+    """First date in the text (by position). order: how to read nn/nn/yyyy."""
     if not text:
         return None
+    found = []
     for rx, kind in DATE_PATTERNS:
-        m = rx.search(text)
-        if not m:
-            continue
+        for m in rx.finditer(text):
+            found.append((m.start(), kind, m))
+    for _, kind, m in sorted(found, key=lambda x: x[0]):
+        if kind == "dmy" and order == "mdy":
+            kind = "mdy"
         try:
             if kind == "ymd":
                 y, mo, d = int(m[1]), int(m[2]), int(m[3])
@@ -80,14 +87,46 @@ def parse_date(text: str) -> str | None:
                 d, mo, y = int(m[1]), MONTHS.get(m[2][:3].lower()), int(m[3])
             elif kind == "Mdy":
                 mo, d, y = MONTHS.get(m[1][:3].lower()), int(m[2]), int(m[3])
+            elif kind == "mdy":
+                mo, d, y = int(m[1]), int(m[2]), int(m[3])
             else:
                 d, mo, y = int(m[1]), int(m[2]), int(m[3])
-            if not mo:
+            if not mo or not 2000 <= y <= NOW.year + 1:
                 continue
             return datetime(y, mo, d).strftime("%Y-%m-%d")
         except ValueError:
             continue
     return None
+
+
+URL_MONTH = re.compile(r"/(20\d{2})-(\d{2})/")
+
+
+def date_from_url(url: str) -> str | None:
+    m = URL_MONTH.search(url)
+    return f"{m[1]}-{m[2]}-01" if m else None
+
+
+def clean_title(a, href: str) -> str:
+    h = a.find(["h1", "h2", "h3", "h4", "h5"])
+    text = h.get_text(" ", strip=True) if h else a.get_text(" ", strip=True)
+    # cut at the first date: "Title 16/10/2026 Lead text…" -> "Title"
+    cut = re.search(r"\s\d{1,2}[ ./-](?:\d{2}|[A-Za-z]{3,9})[ ./-]\d{4}\b", text)
+    if cut and cut.start() > 15:
+        text = text[:cut.start()]
+    text = text.lstrip("↓▸› ").strip()
+    if len(text) < 15:
+        text = a.get("title") or a.get("aria-label") or ""
+    if len(text) < 15:  # fall back to the URL slug
+        slug = urlsplit(href).path.rstrip("/").rsplit("/", 1)[-1]
+        slug = re.sub(r"\.(pdf|html?|aspx)$", "", slug, flags=re.I)
+        text = re.sub(r"[-_]+", " ", slug).strip().capitalize()
+    return text[:200]
+
+
+def excluded(text: str, patterns: list[str]) -> bool:
+    t = text.lower()
+    return any(p.lower() in t for p in patterns)
 
 
 def matches_keywords(text: str, keywords: list[str]) -> bool:
@@ -148,26 +187,38 @@ def collect_html(src: dict) -> list[dict]:
     for tag in soup(["script", "style", "nav", "footer", "header"]):
         tag.decompose()
     needles = [n.lower() for n in src.get("link_contains", [])]
+    domain = src.get("link_domain")
+    order = src.get("date_order", "dmy")
     items, seen = [], set()
+    src["_links_total"] = 0
     for a in soup.find_all("a", href=True):
-        href = urljoin(src["url"], a["href"])
-        if not href.startswith("http") or canonical(href) == canonical(src["url"]):
+        try:
+            href = urljoin(src["url"], a["href"].strip())
+            cu = canonical(href)
+        except ValueError:  # malformed href on the page
+            continue
+        if not href.startswith("http") or cu == canonical(src["url"]):
+            continue
+        src["_links_total"] += 1
+        if domain and domain not in urlsplit(href).netloc:
             continue
         if needles and not any(n in href.lower() for n in needles):
             continue
-        title = a.get_text(" ", strip=True)
-        if len(title) < 15:
-            title = a.get("title") or title
-        if len(title) < 15 or canonical(href) in seen:
+        if cu in seen:
             continue
-        seen.add(canonical(href))
-        # look for a date in the link's block (time tag or nearby text)
-        block = a.find_parent(["li", "article", "tr", "div"]) or a
-        t = block.find("time")
-        date = parse_date(t.get("datetime", "") or t.get_text(" ")) if t else None
+        title = clean_title(a, href)
+        if len(title) < 10:
+            continue
+        seen.add(cu)
+        block = a.find_parent(["li", "article", "tr"]) or a.parent or a
+        t = block.find("time") if hasattr(block, "find") else None
+        date = parse_date(t.get("datetime", "") or t.get_text(" "), order) if t else None
         if not date:
-            date = parse_date(block.get_text(" ", strip=True)[:300])
-        items.append({"title": title[:250], "url": href, "date": date, "summary": ""})
+            date = parse_date(a.get_text(" ", strip=True)[:300], order) or \
+                   parse_date(block.get_text(" ", strip=True)[:300], order)
+        if not date:
+            date = date_from_url(href)
+        items.append({"title": title, "url": href, "date": date, "summary": ""})
         if len(items) >= 40:
             break
     return items
@@ -187,8 +238,11 @@ def main(force: bool = False) -> int:
     cfg = load_json(ROOT / "sources.json", {})
     keywords = cfg.get("keywords", [])
     sources = cfg.get("sources", []) + [g for g in cfg.get("google_alerts", []) if g.get("url")]
-    state = load_json(OUT / "state.json", {"seen": {}, "last_fetch": {}})
+    excludes = cfg.get("exclude", [])
+    state = load_json(OUT / "state.json", {})
     news = load_json(OUT / "news.json", [])
+    if state.get("version") != STATE_VERSION:  # new parser logic -> clean baseline
+        state, news = {"version": STATE_VERSION, "seen": {}, "last_fetch": {}}, []
     seen_titles = {norm_title(n["title"]) for n in news}
     new_items, errors = [], []
 
@@ -206,7 +260,12 @@ def main(force: bool = False) -> int:
         except Exception as exc:  # network, HTTP or parse error -> manual check
             errors.append((src, f"{type(exc).__name__}: {str(exc)[:120]}"))
             continue
+        baseline = src["id"] not in state["last_fetch"]
         state["last_fetch"][src["id"]] = NOW.isoformat()
+        if src["type"] == "html" and not raw:
+            errors.append((src, f"0 подходящих ссылок из {src.get('_links_total', 0)} — "
+                                "страница могла измениться или грузится скриптом"))
+        age_cut = (NOW - timedelta(days=BASELINE_DAYS if baseline else MAX_AGE_DAYS)).strftime("%Y-%m-%d")
         for it in raw:
             if not it["title"] or not it["url"]:
                 continue
@@ -214,9 +273,15 @@ def main(force: bool = False) -> int:
             nt = norm_title(it["title"])
             if cu in state["seen"] or nt in seen_titles:
                 continue
+            state["seen"][cu] = NOW.strftime("%Y-%m-%d")  # remember even if skipped below
+            if excluded(it["title"], excludes + src.get("exclude", [])):
+                continue
+            if it["date"] and it["date"] < age_cut:
+                continue
+            if baseline and not it["date"] and src["type"] == "html":
+                continue
             if src.get("filter") and not matches_keywords(it["title"] + " " + it["summary"], keywords):
                 continue
-            state["seen"][cu] = NOW.strftime("%Y-%m-%d")
             seen_titles.add(nt)
             item = {
                 "title": it["title"], "url": cu, "date": it["date"],
