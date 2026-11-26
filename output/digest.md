@@ -1,11 +1,11 @@
-# Pharos Global — мониторинг · 2026-11-25 21:13 UTC
+# Pharos Global — мониторинг · 2026-11-26 01:37 UTC
 
-Новых в этом запуске: **2**
+Новых в этом запуске: **0**
 
 ## Markets & Macro (24)
 
-- **Federal Reserve** · 2026-11-25 · [Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm) 🆕
-- **ECB** · 2026-11-25 · [ECB and Sveriges Riksbank conclude agreement for Sweden to join T2](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html) 🆕
+- **Federal Reserve** · 2026-11-25 · [Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm)
+- **ECB** · 2026-11-25 · [ECB and Sveriges Riksbank conclude agreement for Sweden to join T2](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html)
 - **ECB** · 2026-11-25 · [Card payments edge past cash in shops; euro area consumers want both](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125~26d1ade228.en.html)
 - **Federal Reserve** · 2026-11-24 · [Minutes of the Board's discount rate meetings on October 19 and October 28, 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm)
 - **ECB** · 2026-11-24 · [Boris Vujčić: Resilience in an age of shocks: lessons from central and eastern Europe](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261124~17928e5456.en.html)
