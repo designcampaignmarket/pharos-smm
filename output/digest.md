@@ -1,6 +1,6 @@
-# Pharos Global — мониторинг · 2026-11-26 01:37 UTC
+# Pharos Global — мониторинг · 2026-11-26 05:26 UTC
 
-Новых в этом запуске: **0**
+Новых в этом запуске: **38**
 
 ## Markets & Macro (24)
 
@@ -29,8 +29,46 @@
 - **World Bank Pink Sheet** · 2026-11-03 · [Latest Commodity Prices Published](https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-November-2026.pdf)
 - **Federal Reserve** · 2026-10-28 · [Federal Reserve issues FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm)
 
-## Regulation (7)
+## Regulation (45)
 
+- **FSC Mauritius** · найдено 2026-11-26 · [Annexure 14 communiqué](https://www.fscmauritius.org/media/kzkmqp0p/annexure-14-communiqué.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Public notice](https://www.fscmauritius.org/media/o5kk2z3j/public-notice.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [New authorised bank signatory regime](https://www.fscmauritius.org/media/sjrpnhe5/new-authorised-bank-signatory-regime.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communique faq 301026](https://www.fscmauritius.org/media/c5vfgluq/communique-faq-301026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Final notice website](https://www.fscmauritius.org/media/apqnq5po/final-notice-website.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Public notice mr tommy lo](https://www.fscmauritius.org/media/jqpjtylm/public-notice-mr-tommy-lo.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Public notice ms hossenny](https://www.fscmauritius.org/media/cfkp4k2g/public-notice-ms-hossenny.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Public notice investment dealer licence](https://www.fscmauritius.org/media/wsgdtrgw/public-notice-investment-dealer-licence.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Reviewed communique updated esg guidelines 081026](https://www.fscmauritius.org/media/fulpxzke/reviewed-communique-updated-esg-guidelines_081026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communique to licensees](https://www.fscmauritius.org/media/tfxflw1r/communique-to-licensees.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communiqué fake fsc documents](https://www.fscmauritius.org/media/m3ilpyfz/communiqué-fake-fsc-documents.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Reviewed website notice replacement of the cctv systems bh 1](https://www.fscmauritius.org/media/xr1jzcq4/reviewed-website-notice-replacement-of-the-cctv-systems-bh-1.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Website notice final 2](https://www.fscmauritius.org/media/3eceoxrk/website-notice-final-2.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Annex 1 advert analyst](https://www.fscmauritius.org/media/nexfoy4q/annex-1-advert_analyst.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Reviewed communique distributex french](https://www.fscmauritius.org/media/fscdqgrz/reviewed-communique-distributex-french.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [V10 communique victoria ed 19082026](https://www.fscmauritius.org/media/iwlhx0ut/v10-communique-victoria-ed-19082026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communiqué ce 14 aug 2026](https://www.fscmauritius.org/media/jfknazux/communiqué-ce-14-aug-2026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communique distributex 14aug26](https://www.fscmauritius.org/media/wjbetgxh/communique_distributex_14aug26.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communique guidance notes on stablecoins vf](https://www.fscmauritius.org/media/b4ngbzrt/communique-_-guidance-notes-on-stablecoins-vf.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Final communique review of fees](https://www.fscmauritius.org/media/c4bhmcmy/final-communique-review-of-fees.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Public notice lifepak ltd](https://www.fscmauritius.org/media/eehf2d4p/public-notice-lifepak-ltd.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Financial services consolidated licensing and fees amendment rules 2026](https://www.fscmauritius.org/media/it1dm5yd/financial-services-consolidated-licensing-and-fees-amendment-rules-2026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Financial services consolidated licensing and fees rules 2008 as at 01 07 26 1](https://www.fscmauritius.org/media/krsbc1ta/financial-services-consolidated-licensing-and-fees-rules-2008-as-at-01-07-26-1.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communiqué oic 26 jun 2026 003](https://www.fscmauritius.org/media/kzseflts/communiqué-oic-26-jun-2026-003.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Renewalofannuallicences 20262027](https://www.fscmauritius.org/media/qp5p4oj4/renewalofannuallicences-20262027.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Final annex 7 public notice](https://www.fscmauritius.org/media/owljhh3t/final-annex-7-public-notice.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Public notice ohr final](https://www.fscmauritius.org/media/4phlcu33/public-notice-ohr-final.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communiqué new authorised bank signatory regime](https://www.fscmauritius.org/media/nhsdipo5/communiqué_new-authorised-bank-signatory-regime.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Final communiqué appointment of coo](https://www.fscmauritius.org/media/ookf2pll/final-communiqué-appointment-of-coo.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Guidelines on frequency of customer due diligence](https://www.fscmauritius.org/media/n2ohsg1i/guidelines-on-frequency-of-customer-due-diligence.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Reviewed communique 02 june 2026 ap](https://www.fscmauritius.org/media/tloajzmq/reviewed-communique-02-june-2026-ap.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Financial services financial services family office rules 2020 revocation rules 2026](https://www.fscmauritius.org/media/h23con4w/financial-services-financial-services-family-office-rules-2020-revocation-rules-2026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Communiqué chief executive resignation may 29 2026](https://www.fscmauritius.org/media/xmbmru52/communiqué_chief-executive-resignation-may-29-2026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Financial services family office rules 2026](https://www.fscmauritius.org/media/j5wlhxur/financial-services-family-office-rules-2026.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [21 public notice](https://www.fscmauritius.org/media/wusbd5eq/21-public-notice.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Publication notice silver bank](https://www.fscmauritius.org/media/xakbhfyu/publication-notice-silver-bank.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Reviewed notice website](https://www.fscmauritius.org/media/pt2h0f4h/reviewed-notice-website.pdf) 🆕
+- **FSC Mauritius** · найдено 2026-11-26 · [Reviewed notice website pest control services](https://www.fscmauritius.org/media/jcqhq2km/reviewed-notice-website-pest-control-services.pdf) 🆕
 - **ICMA** · 2026-11-25 · [ICMA publishes its semi-annual report that provides detailed data on EU and UK corporate bond market trading activity](https://www.icmagroup.org/News/news-in-brief/icma-publishes-its-semi-annual-report-that-provides-detailed-data-on-eu-and-uk-corporate-bond-market-trading-activity-4)
 - **ESMA News** · 2026-11-18 · [DRSP supervisory responsibilities remain unchanged following ESMA assessment](https://www.esma.europa.eu/press-news/esma-news/drsp-supervisory-responsibilities-remain-unchanged-following-esma-assessment)
 - **ICMA** · 2026-11-14 · [ICMA responds to PBoC consultation on Interbank Bond Market Bond Issuance Administration Rules](https://www.icmagroup.org/News/news-in-brief/icma-responds-to-pboc-consultation-on-interbank-bond-market-bond-issuance-administration-rules)
