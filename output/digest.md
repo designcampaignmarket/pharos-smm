@@ -1,9 +1,10 @@
-# Pharos Global — мониторинг · 2026-11-27 05:26 UTC
+# Pharos Global — мониторинг · 2026-11-27 09:27 UTC
 
-Новых в этом запуске: **0**
+Новых в этом запуске: **1**
 
-## Markets & Macro (25)
+## Markets & Macro (26)
 
+- **ECB** · 2026-11-27 · [ECB Consumer Expectations Survey results – October 2026](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261127~2e53af695e.en.html) 🆕
 - **ECB** · 2026-11-26 · [Meeting of 28-29 October 2026](https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261126~ccf28c8071.en.html)
 - **Federal Reserve** · 2026-11-25 · [Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm)
 - **ECB** · 2026-11-25 · [ECB and Sveriges Riksbank conclude agreement for Sweden to join T2](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html)
