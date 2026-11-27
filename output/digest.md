@@ -1,10 +1,10 @@
-# Pharos Global — мониторинг · 2026-11-27 17:23 UTC
+# Pharos Global — мониторинг · 2026-11-27 21:11 UTC
 
-Новых в этом запуске: **2**
+Новых в этом запуске: **0**
 
 ## Markets & Macro (27)
 
-- **ECB** · 2026-11-27 · [Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)](https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html) 🆕
+- **ECB** · 2026-11-27 · [Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)](https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html)
 - **ECB** · 2026-11-27 · [ECB Consumer Expectations Survey results – October 2026](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261127~2e53af695e.en.html)
 - **ECB** · 2026-11-26 · [Meeting of 28-29 October 2026](https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261126~ccf28c8071.en.html)
 - **Federal Reserve** · 2026-11-25 · [Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm)
@@ -82,7 +82,7 @@
 
 ## Digital Assets (4)
 
-- **BIS** · 2026-11-26 · [Inflation expectations in the context of climate change and the green transition](https://www.bis.org/publications/working-paper-1399-inflation-expectations-context-climate-change-and-green-transition) 🆕
+- **BIS** · 2026-11-26 · [Inflation expectations in the context of climate change and the green transition](https://www.bis.org/publications/working-paper-1399-inflation-expectations-context-climate-change-and-green-transition)
 - **BIS** · 2026-11-24 · [When the unthinkable happens: perceptions of monetary policy in tail events](https://www.bis.org/publications/working-paper-1398-when-unthinkable-happens-perceptions-monetary-policy-tail-events)
 - **BIS** · 2026-11-12 · [The gig economy and digital payments](https://www.bis.org/publications/paper-177-gig-economy-and-digital-payments)
 - **BIS** · 2026-11-09 · [Interest rate risk in the banking book – additional Pillar 2 guidance](https://www.bis.org/publications/interest-rate-risk-banking-book---additional-pillar-2-guidance)
