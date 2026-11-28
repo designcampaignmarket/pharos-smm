@@ -1,9 +1,10 @@
-# Pharos Global — мониторинг · 2026-11-28 05:18 UTC
+# Pharos Global — мониторинг · 2026-11-28 09:07 UTC
 
-Новых в этом запуске: **0**
+Новых в этом запуске: **1**
 
-## Markets & Macro (27)
+## Markets & Macro (28)
 
+- **ECB** · 2026-11-28 · [Boris Vujčić: Interview with Kurier](https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261128~10e11f78f1.en.html) 🆕
 - **ECB** · 2026-11-27 · [Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)](https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html)
 - **ECB** · 2026-11-27 · [ECB Consumer Expectations Survey results – October 2026](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261127~2e53af695e.en.html)
 - **ECB** · 2026-11-26 · [Meeting of 28-29 October 2026](https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261126~ccf28c8071.en.html)
